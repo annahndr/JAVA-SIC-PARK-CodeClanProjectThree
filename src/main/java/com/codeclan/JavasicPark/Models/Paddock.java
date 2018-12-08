@@ -21,6 +21,7 @@ public class Paddock {
     @Column(name="name")
     private String name;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "paddock_type")
     private PaddockType paddockType;
 
