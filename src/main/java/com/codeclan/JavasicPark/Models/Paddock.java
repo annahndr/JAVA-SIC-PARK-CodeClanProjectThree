@@ -1,8 +1,10 @@
 package com.codeclan.JavasicPark.Models;
 
+import com.fasterxml.jackson.annotation.JsonValue;
 import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,7 +14,7 @@ import java.util.List;
 
 @Entity
 @Table(name="paddocks")
-public class Paddock {
+public class Paddock implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,6 +22,7 @@ public class Paddock {
 
     @Column(name="name")
     private String name;
+
 
     @Enumerated(EnumType.STRING)
     @Column(name = "paddock_type")
@@ -66,6 +69,7 @@ public class Paddock {
     public PaddockType getPaddockType() {
         return paddockType;
     }
+
 
     public void setPaddockType(PaddockType paddockType) {
         this.paddockType = paddockType;

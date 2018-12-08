@@ -1,10 +1,11 @@
 package com.codeclan.JavasicPark.Models;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "vistors")
-public class Visitor {
+public class Visitor implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

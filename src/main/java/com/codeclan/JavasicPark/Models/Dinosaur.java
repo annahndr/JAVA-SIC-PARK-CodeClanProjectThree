@@ -1,10 +1,13 @@
 package com.codeclan.JavasicPark.Models;
 
+import com.fasterxml.jackson.annotation.JsonValue;
+
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name ="dinosaurs")
-public class Dinosaur {
+public class Dinosaur implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -50,6 +53,7 @@ public class Dinosaur {
         this.name = name;
     }
 
+    @JsonValue
     public DinoSpecies getDinoSpecies() {
         return dinoSpecies;
     }
