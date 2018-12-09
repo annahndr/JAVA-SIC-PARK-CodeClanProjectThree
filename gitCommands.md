@@ -24,9 +24,11 @@ Merging back to main branch:
 1. Check out the branch you want to merge to (ie develop)
 2. git pull origin branchName (ie develop)  (this will ensure the develop in your git repo is up to date with the remote in case someone else has already merged into it)
 3. check out the branch you were working on (ie featureBranch) that you want to merge INTO the branch from step 1
-4. git merge branchName (ie develop) this is merging any changes made to the branch at step 1 into your branch.  Hopefully without conflicts
+4. git merge branchName (ie develop) this is merging any changes made to the branch at step 1 into
+your branch.  Hopefully without conflicts
 5. checkout branch you want to merge into
 6. git merge featureBranch
+7. git push to update github
 
 What to do if you get conflicts:
 pray and look up the notes!
