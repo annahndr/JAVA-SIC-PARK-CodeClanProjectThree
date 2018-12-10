@@ -13,6 +13,7 @@ public interface EmbedPaddockInDino {
     DinoSpecies getDinoSpecies();
     DinoDietType getDinoDietType();
     Paddock getPaddock();
+    String getDinoImage();
 
 
 

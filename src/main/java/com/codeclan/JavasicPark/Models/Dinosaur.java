@@ -21,17 +21,22 @@ public class Dinosaur implements Serializable {
 
     @Column(name = "dino_diet")
     private DinoDietType dinoDietType;
+    @Column(name = "image_path")
+    private String dinoImage;
 
 
     @ManyToOne
     @JoinColumn(name = "paddock_id", nullable = false) //means we can only create a dino if it has a paddock
     private Paddock paddock;
 
-    public Dinosaur(String name, DinoSpecies dinoSpecies, DinoDietType dinoDietType, Paddock paddock) {
+
+    public Dinosaur(String name, DinoSpecies dinoSpecies, DinoDietType dinoDietType, Paddock paddock,
+                    String dinoImage) {
         this.name = name;
         this.dinoSpecies = dinoSpecies;
         this.dinoDietType = dinoDietType;
         this.paddock = paddock;
+        this.dinoImage = dinoImage;
     }
 
     public Dinosaur() {
@@ -68,6 +73,22 @@ public class Dinosaur implements Serializable {
 
     public void setDinoDietType(DinoDietType dinoDietType) {
         this.dinoDietType = dinoDietType;
+    }
+
+    public String getDinoImage() {
+        return dinoImage;
+    }
+
+    public void setDinoImage(String dinoImage) {
+        this.dinoImage = dinoImage;
+    }
+
+    public Paddock getPaddock() {
+        return paddock;
+    }
+
+    public void setPaddock(Paddock paddock) {
+        this.paddock = paddock;
     }
 
 //    TODO remove dino (front end)
