@@ -5,8 +5,9 @@ import org.springframework.data.rest.core.config.Projection;
 
 import java.util.List;
 
-@Projection(name ="embedDinosaurInPaddock", types= Paddock.class)
-public interface EmbedDinosaurInPaddock {
+@Projection(name ="embedDinosaurInPaddock", types= Dinosaur.class)
+public interface EmbedPaddockInDino {
+
     long getId();
     String getName();
     DinoSpecies getDinoSpecies();
