@@ -11,7 +11,7 @@ import java.util.List;
 public interface EmbedDinoInPaddock {
     long getId();
     String getName();
-    PaddockType getPaddockType();
+    String getPaddockType();
     int getMaxNoDinosaurs();
     boolean isfed();
     List<Dinosaur> getDinosaurs();

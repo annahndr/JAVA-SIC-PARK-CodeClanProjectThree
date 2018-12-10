@@ -24,9 +24,8 @@ public class Paddock implements Serializable {
     private String name;
 
 
-    @Enumerated(EnumType.STRING)
     @Column(name = "paddock_type")
-    private PaddockType paddockType;
+    private String paddockType;
 
     @Column(name = "max_no_dinosaurs")
     private int maxNoDinosaurs;
@@ -39,7 +38,7 @@ public class Paddock implements Serializable {
     @OneToMany(mappedBy = "paddock", fetch = FetchType.LAZY)
     private List<Dinosaur> dinosaurs;
 
-    public Paddock(String name, PaddockType paddockType, int maxNoDinosaurs) {
+    public Paddock(String name, String paddockType, int maxNoDinosaurs) {
         this.name = name;
         this.paddockType = paddockType;
         this.maxNoDinosaurs = maxNoDinosaurs;
@@ -66,12 +65,12 @@ public class Paddock implements Serializable {
         this.name = name;
     }
 
-    public PaddockType getPaddockType() {
+    public String getPaddockType() {
         return paddockType;
     }
 
 
-    public void setPaddockType(PaddockType paddockType) {
+    public void setPaddockType(String paddockType) {
         this.paddockType = paddockType;
     }
 

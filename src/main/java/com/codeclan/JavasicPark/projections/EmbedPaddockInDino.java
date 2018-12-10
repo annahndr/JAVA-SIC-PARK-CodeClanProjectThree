@@ -10,8 +10,8 @@ public interface EmbedPaddockInDino {
 
     long getId();
     String getName();
-    DinoSpecies getDinoSpecies();
-    DinoDietType getDinoDietType();
+    String getDinoSpecies();
+    String getDinoDietType();
     Paddock getPaddock();
     String getDinoImage();
 

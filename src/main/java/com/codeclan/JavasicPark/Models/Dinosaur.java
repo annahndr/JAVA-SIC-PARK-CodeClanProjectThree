@@ -17,10 +17,11 @@ public class Dinosaur implements Serializable {
     private String name;
 
     @Column(name ="dino_species")
-    private DinoSpecies dinoSpecies;
+    private String dinoSpecies;
 
     @Column(name = "dino_diet")
-    private DinoDietType dinoDietType;
+    private String dinoDietType;
+
     @Column(name = "image_path")
     private String dinoImage;
 
@@ -30,7 +31,7 @@ public class Dinosaur implements Serializable {
     private Paddock paddock;
 
 
-    public Dinosaur(String name, DinoSpecies dinoSpecies, DinoDietType dinoDietType, Paddock paddock,
+    public Dinosaur(String name, String dinoSpecies, String dinoDietType, Paddock paddock,
                     String dinoImage) {
         this.name = name;
         this.dinoSpecies = dinoSpecies;
@@ -59,19 +60,19 @@ public class Dinosaur implements Serializable {
     }
 
     @JsonValue
-    public DinoSpecies getDinoSpecies() {
+    public String getDinoSpecies() {
         return dinoSpecies;
     }
 
-    public void setDinoSpecies(DinoSpecies dinoSpecies) {
+    public void setDinoSpecies(String dinoSpecies) {
         this.dinoSpecies = dinoSpecies;
     }
 
-    public DinoDietType getDinoDietType() {
+    public String getDinoDietType() {
         return dinoDietType;
     }
 
-    public void setDinoDietType(DinoDietType dinoDietType) {
+    public void setDinoDietType(String dinoDietType) {
         this.dinoDietType = dinoDietType;
     }
 

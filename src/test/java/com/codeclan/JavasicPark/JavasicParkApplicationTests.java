@@ -19,7 +19,7 @@ public class JavasicParkApplicationTests {
 	private Paddock paddock;
 	@Before
 	public void setUp() throws Exception {
-		paddock = new Paddock("paddock", PaddockType.HERBIVORE, 5);
+		paddock = new Paddock("paddock", "Herbivore", 5);
 	}
 
 	@Test

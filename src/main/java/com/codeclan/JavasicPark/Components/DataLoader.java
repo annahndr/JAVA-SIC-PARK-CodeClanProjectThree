@@ -29,17 +29,17 @@ public class DataLoader implements ApplicationRunner {
 
     public void run(ApplicationArguments args) {
 
-        Paddock sunny_acres = new Paddock("Sunny Acres", PaddockType.HERBIVORE, 10);
-        Paddock green_hills = new Paddock("Green Hills", PaddockType.HERBIVORE, 5);
-        Paddock bay_view = new Paddock("Bay View", PaddockType.CARNIVORE, 3);
-        Paddock lake_side = new Paddock("Lake Side", PaddockType.HERBIVORE, 2);
-        Paddock fishers_point= new Paddock("Fishers Point", PaddockType.CARNIVORE, 1);
+        Paddock sunny_acres = new Paddock("Sunny Acres", "Herbivore", 10);
+        Paddock green_hills = new Paddock("Green Hills", "Herbivore", 5);
+        Paddock bay_view = new Paddock("Bay View", "Carnivore", 3);
+        Paddock lake_side = new Paddock("Lake Side", "Herbivore", 2);
+        Paddock fishers_point= new Paddock("Fishers Point", "Herbivore", 1);
 
-        Dinosaur dippy = new Dinosaur("Dippy", DinoSpecies.DIPLODOCUS, DinoDietType.HERBIVORE, sunny_acres, "/images/diplodocus.jpg");
-        Dinosaur steggy = new Dinosaur("Steggy", DinoSpecies.STEGOSAURUS, DinoDietType.HERBIVORE, sunny_acres,
+        Dinosaur dippy = new Dinosaur("Dippy", "Diplodocus", "Herbivore", sunny_acres, "/images/diplodocus.jpg");
+        Dinosaur steggy = new Dinosaur("Steggy","Stegosaurus" , "Herbivore", sunny_acres,
                 "/images/stegasaurus.jpg");
-        Dinosaur rex = new Dinosaur("Rex", DinoSpecies.TYRANOSAURUSREX, DinoDietType.CARNIVORE, bay_view,"/images/trex.jpg");
-        Dinosaur velo = new Dinosaur("Velo", DinoSpecies.VELOCIRAPTOR, DinoDietType.CARNIVORE, bay_view, "/images/velociraptor.png");
+        Dinosaur rex = new Dinosaur("Rex", "Tyranosaurusrex", "Carnivore", bay_view,"/images/trex.jpg");
+        Dinosaur velo = new Dinosaur("Velo", "Velociraptor", "Carnivore", bay_view, "/images/velociraptor.png");
 
         Visitor anna = new Visitor("Anna");
         Visitor gillian = new Visitor("Gillian");
