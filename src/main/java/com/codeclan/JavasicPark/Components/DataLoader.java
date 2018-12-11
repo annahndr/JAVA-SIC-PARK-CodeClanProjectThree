@@ -51,12 +51,17 @@ public class DataLoader implements ApplicationRunner {
         paddockRepository.save(lake_side);
         paddockRepository.save(fishers_point);
 
-
-        dinosaurRepository.save(dippy);
-        dinosaurRepository.save(steggy);
         dinosaurRepository.save(rex);
+
+
+        velo.setPaddock(bay_view);
         dinosaurRepository.save(velo);
 
+
+        dippy.setPaddock(sunny_acres);
+        steggy.setPaddock(sunny_acres);
+        dinosaurRepository.save(dippy);
+        dinosaurRepository.save(steggy);
 
         visitorRepository.save(anna);
         visitorRepository.save(gillian);
