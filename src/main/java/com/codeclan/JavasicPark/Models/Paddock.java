@@ -1,7 +1,7 @@
 package com.codeclan.JavasicPark.Models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonValue;
 import org.hibernate.annotations.Cascade;
 
@@ -24,7 +24,6 @@ public class Paddock implements Serializable {
 
     @Column(name="name")
     private String name;
-
 
     @Column(name = "paddock_type")
     private String paddockType;
