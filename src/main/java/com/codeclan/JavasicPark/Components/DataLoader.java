@@ -45,9 +45,14 @@ public class DataLoader implements ApplicationRunner {
         Visitor gillian = new Visitor("Gillian");
         Visitor david = new Visitor("David");
 
+        sunny_acres.setActivated(true);
         paddockRepository.save(sunny_acres);
+
         paddockRepository.save(green_hills);
+
+        bay_view.setActivated(true);
         paddockRepository.save(bay_view);
+
         paddockRepository.save(lake_side);
         paddockRepository.save(fishers_point);
 
