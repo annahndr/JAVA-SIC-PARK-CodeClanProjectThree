@@ -33,6 +33,9 @@ public class Paddock implements Serializable {
     @Column(name= "fed")
     private boolean fed;
 
+    @Column(name="activated")
+    private boolean activated;
+
 //    @Cascade(org.hibernate.annotations.CascadeType.DELETE)
 
     @OneToMany(mappedBy = "paddock", fetch = FetchType.LAZY)
@@ -43,10 +46,19 @@ public class Paddock implements Serializable {
         this.paddockType = paddockType;
         this.maxNoDinosaurs = maxNoDinosaurs;
         this.fed = false;
+        this.activated = activated;
         this.dinosaurs = new ArrayList<Dinosaur>();
     }
 
     public Paddock() {
+    }
+
+    public boolean isActivated() {
+        return activated;
+    }
+
+    public void setActivated(boolean activated) {
+        this.activated = activated;
     }
 
     public Long getId() {
