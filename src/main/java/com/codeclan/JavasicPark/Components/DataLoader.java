@@ -35,11 +35,11 @@ public class DataLoader implements ApplicationRunner {
         Paddock lake_side = new Paddock("Lake Side", "Herbivore", 2);
         Paddock fishers_point= new Paddock("Fishers Point", "Herbivore", 1);
 
-        Dinosaur dippy = new Dinosaur("Dippy", "Diplodocus", "Herbivore", sunny_acres, "/images/diplodocus.jpg");
-        Dinosaur steggy = new Dinosaur("Steggy","Stegosaurus" , "Herbivore", sunny_acres,
+        Dinosaur dippy = new Dinosaur("Dippy", "Diplodocus", "Herbivore", "/images/diplodocus.jpg");
+        Dinosaur steggy = new Dinosaur("Steggy","Stegosaurus" , "Herbivore",
                 "/images/stegasaurus.jpg");
-        Dinosaur rex = new Dinosaur("Rex", "Tyranosaurusrex", "Carnivore", bay_view,"/images/trex.jpg");
-        Dinosaur velo = new Dinosaur("Velo", "Velociraptor", "Carnivore", bay_view, "/images/velociraptor.png");
+        Dinosaur rex = new Dinosaur("Rex", "Tyranosaurusrex", "Carnivore","/images/trex.jpg");
+        Dinosaur velo = new Dinosaur("Velo", "Velociraptor", "Carnivore", "/images/velociraptor.png");
 
         Visitor anna = new Visitor("Anna");
         Visitor gillian = new Visitor("Gillian");

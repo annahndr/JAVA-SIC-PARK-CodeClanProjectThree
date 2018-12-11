@@ -14,6 +14,7 @@ public interface EmbedDinoInPaddock {
     String getPaddockType();
     int getMaxNoDinosaurs();
     boolean isfed();
+    boolean isActivated();
     List<Dinosaur> getDinosaurs();
 
 
