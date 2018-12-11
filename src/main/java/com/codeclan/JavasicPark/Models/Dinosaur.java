@@ -27,11 +27,11 @@ public class Dinosaur implements Serializable {
 
 
     @ManyToOne
-    @JoinColumn(name = "paddock_id", nullable = false) //means we can only create a dino if it has a paddock
+    @JoinColumn(name = "paddock_id")
     private Paddock paddock;
 
 
-    public Dinosaur(String name, String dinoSpecies, String dinoDietType, Paddock paddock,
+    public Dinosaur(String name, String dinoSpecies, String dinoDietType,
                     String dinoImage) {
         this.name = name;
         this.dinoSpecies = dinoSpecies;
