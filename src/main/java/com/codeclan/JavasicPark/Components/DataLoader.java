@@ -68,6 +68,7 @@ public class DataLoader implements ApplicationRunner {
         dinosaurRepository.save(dippy);
         dinosaurRepository.save(steggy);
 
+
         visitorRepository.save(anna);
         visitorRepository.save(gillian);
         visitorRepository.save(david);
